@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "target_channel": {
+    "channel_id": "",
+    "channel_url": "",
+    "channel_name": ""
+  },
+  "active_hours": {
+    "start": "10:00",
+    "end": "22:00",
+    "timezone": "UTC",
+    "enabled": true
+  },
+  "monitoring": {
+    "check_interval_minutes": 10,
+    "catch_up_on_start": true,
+    "max_videos_per_check": 5,
+    "lookback_hours": 24
+  },
+  "download": {
+    "directory": "downloads",
+    "video_quality": "best",
+    "format": "mp4",
+    "max_filesize_mb": 2048,
+    "download_thumbnail": true,
+    "download_subtitles": false
+  },
+  "upload": {
+    "title_prefix": "",
+    "title_suffix": "",
+    "description_append": "\n\n---\nAutomatically uploaded via YouTube Bot Video Extractor",
+    "privacy_status": "public",
+    "category_id": "22",
+    "tags": [],
+    "made_for_kids": false,
+    "auto_publish": true
+  },
+  "notifications": {
+    "enabled": true,
+    "on_download_start": true,
+    "on_download_complete": true,
+    "on_upload_start": true,
+    "on_upload_complete": true,
+    "on_error": true
+  },
+  "performance": {
+    "max_concurrent_downloads": 2,
+    "max_concurrent_uploads": 1,
+    "api_request_timeout_seconds": 30,
+    "download_chunk_size_kb": 1024
+  },
+  "cleanup": {
+    "auto_delete_after_upload": false,
+    "keep_days": 7,
+    "max_storage_gb": 50
+  }
+}

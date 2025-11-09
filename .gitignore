@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Application Specific
+*.log
+*.db
+*.sqlite
+*.sqlite3
+data/
+downloads/
+uploads/
+logs/
+temp/
+cache/
+
+# Credentials & Secrets
+.env
+client_secrets.json
+oauth_token.json
+*.json.bak
+config.json
+
+# Build & Packaging
+build/
+dist/
+*.spec
+installer/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# OS
+Thumbs.db
+desktop.ini

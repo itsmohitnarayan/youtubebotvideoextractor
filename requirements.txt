@@ -1,0 +1,22 @@
+# Core Dependencies
+python-dotenv==1.0.0
+httpx==0.25.2
+requests==2.31.0
+
+# YouTube Integration
+google-api-python-client==2.108.0
+google-auth-oauthlib==1.1.0
+google-auth-httplib2==0.1.1
+yt-dlp==2023.12.30
+
+# GUI Framework
+PyQt5==5.15.10
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.13.0
+
+# Task Scheduling
+APScheduler==3.10.4
+
+# Utilities
+Pillow==10.1.0
+tqdm==4.66.1
