@@ -52,6 +52,7 @@ cache/
 .env
 client_secrets.json
 oauth_token.json
+token.json
 *.json.bak
 config.json
 
