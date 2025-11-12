@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-11-10T12:29:14.712187",
+  "summary": {
+    "total_findings": 2,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "LOW": 0,
+      "INFO": 1
+    },
+    "by_category": {
+      "Dependencies": 1,
+      "File Permissions": 1
+    }
+  },
+  "findings": [
+    {
+      "category": "Dependencies",
+      "severity": "INFO",
+      "title": "Consider automated vulnerability scanning",
+      "description": "Use tools like safety or pip-audit for CVE detection",
+      "file": null,
+      "line": null,
+      "recommendation": "Add to CI/CD: pip install safety && safety check",
+      "timestamp": "2025-11-10T12:29:14.587348"
+    },
+    {
+      "category": "File Permissions",
+      "severity": "MEDIUM",
+      "title": "Database file readable by others",
+      "description": "app.db has overly permissive read permissions",
+      "file": "data/app.db",
+      "line": null,
+      "recommendation": "Restrict permissions to owner only",
+      "timestamp": "2025-11-10T12:29:14.587628"
+    }
+  ]
+}

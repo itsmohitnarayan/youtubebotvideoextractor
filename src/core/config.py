@@ -9,6 +9,13 @@ from pathlib import Path
 from typing import Any, Optional
 from dotenv import load_dotenv
 
+# Import file security utility for automatic permission hardening
+try:
+    from src.utils.file_security import secure_sensitive_files
+    _SECURITY_AVAILABLE = True
+except ImportError:
+    _SECURITY_AVAILABLE = False
+
 
 class ConfigManager:
     """Manages application configuration from JSON file and environment variables."""
@@ -31,6 +38,14 @@ class ConfigManager:
         
         # Load configuration
         self._load_config()
+        
+        # Secure sensitive files and directories (Windows permissions hardening)
+        if _SECURITY_AVAILABLE:
+            try:
+                secure_sensitive_files()
+            except Exception as e:
+                # Non-critical: just log the warning
+                print(f"⚠️  Could not secure file permissions: {e}")
     
     def _load_config(self) -> None:
         """Load configuration from file."""

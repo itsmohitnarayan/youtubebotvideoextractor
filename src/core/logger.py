@@ -128,3 +128,16 @@ class LoggerAdapter:
     def critical(self, message: str, **kwargs) -> None:
         """Log critical message."""
         self._log('CRITICAL', message, **kwargs)
+
+
+def close_logger(logger: logging.Logger) -> None:
+    """
+    Close all handlers for a logger.
+    
+    Args:
+        logger: Logger instance to close
+    """
+    handlers = logger.handlers[:]
+    for handler in handlers:
+        handler.close()
+        logger.removeHandler(handler)

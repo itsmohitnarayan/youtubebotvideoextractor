@@ -1,0 +1,889 @@
+{
+  "test_date": "2025-11-10T16:30:13.735794",
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "python_version": "3.14.0"
+  },
+  "summary": {
+    "total_tests": 108,
+    "passed": 107,
+    "failed": 1,
+    "pass_rate": 99.07407407407408
+  },
+  "results": [
+    {
+      "scenario": "TS-ENV",
+      "test_name": "Python Version >= 3.8",
+      "passed": true,
+      "details": "Found: 3.14.0",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.774227"
+    },
+    {
+      "scenario": "TS-ENV",
+      "test_name": "Running on Windows",
+      "passed": true,
+      "details": "OS: Windows 11",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.774351"
+    },
+    {
+      "scenario": "TS-ENV",
+      "test_name": "Directory 'src' exists",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\src",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.774614"
+    },
+    {
+      "scenario": "TS-ENV",
+      "test_name": "Directory 'tests' exists",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\tests",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.774856"
+    },
+    {
+      "scenario": "TS-ENV",
+      "test_name": "Directory 'data' exists",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\data",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.775028"
+    },
+    {
+      "scenario": "TS-ENV",
+      "test_name": "Directory 'logs' exists",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\logs",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.775163"
+    },
+    {
+      "scenario": "TS-ENV",
+      "test_name": "Directory 'docs' exists",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\docs",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.775356"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "Config instance created successfully",
+      "passed": true,
+      "details": "Config file: config.json",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.777661"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "Config has 'monitoring check interval'",
+      "passed": true,
+      "details": "Value: 10",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.777771"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "Config has 'download directory'",
+      "passed": true,
+      "details": "Value: downloads",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.777893"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "Config has 'max concurrent downloads'",
+      "passed": true,
+      "details": "Value: 2",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.777987"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "Config has 'retry attempts'",
+      "passed": false,
+      "details": "Value: None",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.778104"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "Config has 'active hours start'",
+      "passed": true,
+      "details": "Value: 10:00",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.778193"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "Config has 'active hours end'",
+      "passed": true,
+      "details": "Value: 22:00",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.778276"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "max_concurrent_downloads in valid range (1-10)",
+      "passed": true,
+      "details": "Value: 2",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.778351"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "retry_attempts in valid range (0-5)",
+      "passed": true,
+      "details": "Value: 0",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.778441"
+    },
+    {
+      "scenario": "TS-002",
+      "test_name": "Data directory is writable",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\data",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.778631"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Database initialized successfully",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\data\\videos.db",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.779213"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Table 'videos' exists",
+      "passed": true,
+      "details": "Tables found: videos, sqlite_sequence, logs, stats, settings",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.779725"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Table 'settings' exists",
+      "passed": true,
+      "details": "Tables found: videos, sqlite_sequence, logs, stats, settings",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.779843"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Table 'logs' exists",
+      "passed": true,
+      "details": "Tables found: videos, sqlite_sequence, logs, stats, settings",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.779942"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Table 'stats' exists",
+      "passed": true,
+      "details": "Tables found: videos, sqlite_sequence, logs, stats, settings",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.780065"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Column 'videos.id' exists",
+      "passed": true,
+      "details": "Columns: id, source_video_id, source_title, source_description, source_published_at, source_thumbnail_url, downloaded_at, uploaded_at, target_video_id, target_url, status, error_message, metadata, created_at, updated_at",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.780222"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Column 'videos.source_video_id' exists",
+      "passed": true,
+      "details": "Columns: id, source_video_id, source_title, source_description, source_published_at, source_thumbnail_url, downloaded_at, uploaded_at, target_video_id, target_url, status, error_message, metadata, created_at, updated_at",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.780313"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Column 'videos.source_title' exists",
+      "passed": true,
+      "details": "Columns: id, source_video_id, source_title, source_description, source_published_at, source_thumbnail_url, downloaded_at, uploaded_at, target_video_id, target_url, status, error_message, metadata, created_at, updated_at",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.780397"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Column 'videos.status' exists",
+      "passed": true,
+      "details": "Columns: id, source_video_id, source_title, source_description, source_published_at, source_thumbnail_url, downloaded_at, uploaded_at, target_video_id, target_url, status, error_message, metadata, created_at, updated_at",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.780481"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Column 'videos.created_at' exists",
+      "passed": true,
+      "details": "Columns: id, source_video_id, source_title, source_description, source_published_at, source_thumbnail_url, downloaded_at, uploaded_at, target_video_id, target_url, status, error_message, metadata, created_at, updated_at",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.780567"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Can query videos table",
+      "passed": true,
+      "details": "Current record count: 0",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.780708"
+    },
+    {
+      "scenario": "TS-003",
+      "test_name": "Database integrity check",
+      "passed": true,
+      "details": "Result: ok",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.780968"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Valid URL accepted: https://www.youtube.com/watch?v=dQw4w9WgXcQ...",
+      "passed": [
+        true,
+        ""
+      ],
+      "details": "",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.781553"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Valid URL accepted: https://youtu.be/dQw4w9WgXcQ...",
+      "passed": [
+        true,
+        ""
+      ],
+      "details": "",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.781692"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Valid URL accepted: https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=10s...",
+      "passed": [
+        true,
+        ""
+      ],
+      "details": "",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.781751"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Invalid URL rejected: http://www.youtube.com/watch?v=invalid...",
+      "passed": true,
+      "details": "Error message: Only HTTPS URLs are allowed for security reasons",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.781837"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Invalid URL rejected: https://example.com/video...",
+      "passed": true,
+      "details": "Error message: Invalid YouTube URL format",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.781965"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Invalid URL rejected: not_a_url...",
+      "passed": true,
+      "details": "Error message: Invalid YouTube URL format",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.782056"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Invalid URL rejected: ...",
+      "passed": true,
+      "details": "Error message: URL cannot be empty",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.782168"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Invalid URL rejected: javascript:alert(1)...",
+      "passed": true,
+      "details": "Error message: Invalid YouTube URL format",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.782369"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Path validation: normal_file.txt...",
+      "passed": true,
+      "details": "Expected valid=True, Got valid=True, Message: ",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.783241"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Path validation: ../../../etc/passwd...",
+      "passed": true,
+      "details": "Expected valid=False, Got valid=False, Message: Path traversal detected: path must be within D:\\2025\\youtubebotvideoextractor\\data",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.783997"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Path validation: ..\\..\\windows\\system32\\config...",
+      "passed": true,
+      "details": "Expected valid=False, Got valid=False, Message: Path traversal detected: path must be within D:\\2025\\youtubebotvideoextractor\\data",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.784730"
+    },
+    {
+      "scenario": "TS-004",
+      "test_name": "Path validation: D:\\2025\\youtubebotvideoextractor\\data\\te...",
+      "passed": true,
+      "details": "Expected valid=True, Got valid=True, Message: ",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:13.785243"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: README.md",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\README.md",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.785639"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: README.md",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.785765"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: SETUP.md",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\SETUP.md",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.785919"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: SETUP.md",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.786054"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: requirements.txt",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\requirements.txt",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.786204"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: requirements.txt",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.786350"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: src/core/config.py",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\src\\core\\config.py",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.786529"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: src/core/config.py",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.786683"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: src/core/database.py",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\src\\core\\database.py",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.786840"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: src/core/database.py",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.786947"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: src/youtube/api_client.py",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\src\\youtube\\api_client.py",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.787106"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: src/youtube/api_client.py",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.787230"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: src/gui/main_window.py",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\src\\gui\\main_window.py",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.787435"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: src/gui/main_window.py",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.787560"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: docs/USER_GUIDE.md",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\docs\\USER_GUIDE.md",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.787691"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: docs/USER_GUIDE.md",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.787799"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: docs/TROUBLESHOOTING.md",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\docs\\TROUBLESHOOTING.md",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.787932"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: docs/TROUBLESHOOTING.md",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.788032"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File exists: docs/API_LIMITS.md",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\docs\\API_LIMITS.md",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.788157"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "File readable: docs/API_LIMITS.md",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.788254"
+    },
+    {
+      "scenario": "TS-005",
+      "test_name": "Data directory has restricted permissions",
+      "passed": true,
+      "details": "File security utility integrated in Phase 5 Task 4",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:13.801832"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'python-dotenv' importable",
+      "passed": true,
+      "details": "Import name: dotenv",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.802550"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'httpx' importable",
+      "passed": true,
+      "details": "Import name: httpx",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:13.959697"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'requests' importable",
+      "passed": true,
+      "details": "Import name: requests",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.037134"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'google-api-python-client' importable",
+      "passed": true,
+      "details": "Import name: googleapiclient",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.039017"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'google-auth-oauthlib' importable",
+      "passed": true,
+      "details": "Import name: google_auth_oauthlib",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.266243"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'google-auth-httplib2' importable",
+      "passed": true,
+      "details": "Import name: google_auth_httplib2",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.301459"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'yt-dlp' importable",
+      "passed": true,
+      "details": "Import name: yt_dlp",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.458086"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'PyQt5' importable",
+      "passed": true,
+      "details": "Import name: PyQt5",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.460246"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'PyQt5-Qt5' importable",
+      "passed": true,
+      "details": "Import name: PyQt5.QtCore",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.477137"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'PyQt5-sip' importable",
+      "passed": true,
+      "details": "Import name: PyQt5.sip",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.477398"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'APScheduler' importable",
+      "passed": true,
+      "details": "Import name: apscheduler",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.486715"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'Pillow' importable",
+      "passed": true,
+      "details": "Import name: PIL",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.490769"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "Package 'tqdm' importable",
+      "passed": true,
+      "details": "Import name: tqdm",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.509902"
+    },
+    {
+      "scenario": "TS-006",
+      "test_name": "FFmpeg installed and accessible",
+      "passed": true,
+      "details": "Version: ffmpeg version 8.0-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:14.565091"
+    },
+    {
+      "scenario": "TS-022",
+      "test_name": "CPU usage idle < 5%",
+      "passed": true,
+      "details": "Current: 0.00%",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.566231"
+    },
+    {
+      "scenario": "TS-022",
+      "test_name": "Memory usage idle < 100 MB",
+      "passed": true,
+      "details": "Current: 70.67 MB",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.566485"
+    },
+    {
+      "scenario": "TS-022",
+      "test_name": "Thread count reasonable (< 20)",
+      "passed": true,
+      "details": "Current: 7 threads",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.571757"
+    },
+    {
+      "scenario": "TS-022",
+      "test_name": "Open file handles reasonable (< 50)",
+      "passed": true,
+      "details": "Current: 1 handles",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.663600"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Project Overview has content (> 1 KB)",
+      "passed": true,
+      "details": "Size: 11,218 bytes",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.664265"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Project Overview mentions 'installation'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.664748"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Project Overview mentions 'features'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.664840"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Project Overview mentions 'usage'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.664906"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Setup Guide has content (> 1 KB)",
+      "passed": true,
+      "details": "Size: 11,232 bytes",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.665131"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Setup Guide mentions 'prerequisites'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.665559"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Setup Guide mentions 'python'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.665645"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Setup Guide mentions 'ffmpeg'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.665706"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Setup Guide mentions 'dependencies'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.665757"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "User Guide has content (> 1 KB)",
+      "passed": true,
+      "details": "Size: 19,282 bytes",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.665911"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "User Guide mentions 'configuration'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.666303"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "User Guide mentions 'queue'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.666382"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "User Guide mentions 'upload'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.666426"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "User Guide mentions 'dashboard'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.666467"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Troubleshooting has content (> 1 KB)",
+      "passed": true,
+      "details": "Size: 16,963 bytes",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.666655"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Troubleshooting mentions 'authentication'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.667064"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Troubleshooting mentions 'download'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.667155"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Troubleshooting mentions 'upload'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.667193"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "Troubleshooting mentions 'error'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.667234"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "API Limits has content (> 1 KB)",
+      "passed": true,
+      "details": "Size: 14,346 bytes",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.667377"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "API Limits mentions 'quota'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.667698"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "API Limits mentions 'limits'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.667772"
+    },
+    {
+      "scenario": "TS-DOC",
+      "test_name": "API Limits mentions 'optimization'",
+      "passed": true,
+      "details": "",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.667811"
+    },
+    {
+      "scenario": "TS-SECURITY",
+      "test_name": "Security file exists: src/utils/validators.py",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\src\\utils\\validators.py",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.668090"
+    },
+    {
+      "scenario": "TS-SECURITY",
+      "test_name": "Path traversal prevention implemented",
+      "passed": true,
+      "details": "resolve: True, relative_to: True",
+      "severity": "CRITICAL",
+      "timestamp": "2025-11-10T16:30:15.668352"
+    },
+    {
+      "scenario": "TS-SECURITY",
+      "test_name": "Security file exists: src/utils/file_security.py",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\src\\utils\\file_security.py",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.668518"
+    },
+    {
+      "scenario": "TS-SECURITY",
+      "test_name": "Security file exists: scripts/security_audit.py",
+      "passed": true,
+      "details": "Path: D:\\2025\\youtubebotvideoextractor\\scripts\\security_audit.py",
+      "severity": "HIGH",
+      "timestamp": "2025-11-10T16:30:15.668733"
+    },
+    {
+      "scenario": "TS-SECURITY",
+      "test_name": "HTTPS enforced in tests (no HTTP YouTube URLs)",
+      "passed": true,
+      "details": "Files with HTTP: None",
+      "severity": "MEDIUM",
+      "timestamp": "2025-11-10T16:30:15.671837"
+    }
+  ]
+}

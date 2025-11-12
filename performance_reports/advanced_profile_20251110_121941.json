@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-11-10T12:19:23.570264",
+  "tests": {
+    "concurrent_processing": {
+      "num_videos": 100,
+      "add_time_s": 0.000331878662109375,
+      "process_time_s": 2.1769602298736572,
+      "total_time_s": 2.1772921085357666,
+      "throughput_per_second": 45.928609949930056,
+      "processed": 100
+    },
+    "memory_leak": {
+      "iterations": 100,
+      "initial_mb": 23.828125,
+      "final_mb": 23.87890625,
+      "growth_mb": 0.05078125,
+      "growth_per_iteration_kb": 0.52,
+      "samples": [
+        23.828125,
+        23.87109375,
+        23.87890625,
+        23.87890625,
+        23.87890625,
+        23.87890625,
+        23.87890625,
+        23.87890625,
+        23.87890625,
+        23.87890625,
+        23.87890625,
+        23.87890625
+      ],
+      "leak_detected": false
+    },
+    "event_storm": {
+      "num_events": 100000,
+      "time_s": 0.33397459983825684,
+      "events_per_second": 299423.9683150449,
+      "events_received": 100000,
+      "all_received": true
+    },
+    "database_stress": {
+      "num_operations": 10000,
+      "time_s": 12.98630404472351,
+      "operations_per_second": 770.0420354829994,
+      "avg_operation_ms": 1.2986304044723511
+    },
+    "queue_stress": {
+      "num_tasks": 10000,
+      "add_time_s": 0.03802132606506348,
+      "process_time_s": 2.055267810821533,
+      "total_time_s": 2.0932891368865967,
+      "throughput_per_second": 4777.170923875934,
+      "processed": 10000
+    }
+  }
+}

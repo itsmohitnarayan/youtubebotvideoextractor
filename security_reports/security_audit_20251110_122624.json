@@ -1,0 +1,72 @@
+{
+  "timestamp": "2025-11-10T12:26:24.873192",
+  "summary": {
+    "total_findings": 5,
+    "by_severity": {
+      "CRITICAL": 0,
+      "HIGH": 1,
+      "MEDIUM": 3,
+      "LOW": 0,
+      "INFO": 1
+    },
+    "by_category": {
+      "Input Validation": 1,
+      "HTTPS Enforcement": 1,
+      "Dependencies": 1,
+      "File Permissions": 1,
+      "Logging Security": 1
+    }
+  },
+  "findings": [
+    {
+      "category": "Input Validation",
+      "severity": "HIGH",
+      "title": "Path traversal not prevented",
+      "description": "File path validation may not prevent directory traversal attacks",
+      "file": "src/utils/validators.py",
+      "line": null,
+      "recommendation": "Use Path.resolve() and check if result is within allowed directory",
+      "timestamp": "2025-11-10T12:26:24.652836"
+    },
+    {
+      "category": "HTTPS Enforcement",
+      "severity": "MEDIUM",
+      "title": "HTTP URL used instead of HTTPS",
+      "description": "Found non-HTTPS URL in API call or configuration",
+      "file": "tests\\test_validators.py",
+      "line": 34,
+      "recommendation": "Use HTTPS for all external API calls",
+      "timestamp": "2025-11-10T12:26:24.747190"
+    },
+    {
+      "category": "Dependencies",
+      "severity": "INFO",
+      "title": "Consider automated vulnerability scanning",
+      "description": "Use tools like safety or pip-audit for CVE detection",
+      "file": null,
+      "line": null,
+      "recommendation": "Add to CI/CD: pip install safety && safety check",
+      "timestamp": "2025-11-10T12:26:24.756845"
+    },
+    {
+      "category": "File Permissions",
+      "severity": "MEDIUM",
+      "title": "Database file readable by others",
+      "description": "app.db has overly permissive read permissions",
+      "file": "data/app.db",
+      "line": null,
+      "recommendation": "Restrict permissions to owner only",
+      "timestamp": "2025-11-10T12:26:24.757214"
+    },
+    {
+      "category": "Logging Security",
+      "severity": "MEDIUM",
+      "title": "Potential sensitive data in logs",
+      "description": "Logging statement may include passwords, tokens, or keys",
+      "file": "src\\youtube\\api_client.py",
+      "line": 97,
+      "recommendation": "Sanitize sensitive data before logging or use DEBUG level",
+      "timestamp": "2025-11-10T12:26:24.866318"
+    }
+  ]
+}

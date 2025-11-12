@@ -25,6 +25,9 @@
     "download_thumbnail": true,
     "download_subtitles": false
   },
+  "database": {
+    "path": "data/videos.db"
+  },
   "upload": {
     "title_prefix": "",
     "title_suffix": "",
@@ -46,6 +49,7 @@
   "performance": {
     "max_concurrent_downloads": 2,
     "max_concurrent_uploads": 1,
+    "retry_attempts": 3,
     "api_request_timeout_seconds": 30,
     "download_chunk_size_kb": 1024
   },

@@ -10,7 +10,7 @@ from typing import Tuple
 
 def validate_youtube_url(url: str) -> Tuple[bool, str]:
     """
-    Validate YouTube URL format.
+    Validate YouTube URL format with HTTPS enforcement.
     
     Args:
         url: URL to validate
@@ -21,10 +21,15 @@ def validate_youtube_url(url: str) -> Tuple[bool, str]:
     if not url:
         return False, "URL cannot be empty"
     
+    # Enforce HTTPS only (security requirement from Phase 5 Task 4)
     youtube_patterns = [
-        r'^https?://(www\.)?youtube\.com/',
-        r'^https?://youtu\.be/',
+        r'^https://(www\.)?youtube\.com/',
+        r'^https://youtu\.be/',
     ]
+    
+    # Check if URL is HTTP (insecure)
+    if url.startswith('http://'):
+        return False, "Only HTTPS URLs are allowed for security reasons"
     
     for pattern in youtube_patterns:
         if re.match(pattern, url):
@@ -104,13 +109,15 @@ def validate_time_format(time_str: str) -> Tuple[bool, str]:
         return False, "Invalid time format"
 
 
-def validate_file_path(file_path: str, must_exist: bool = False) -> Tuple[bool, str]:
+def validate_file_path(file_path: str, must_exist: bool = False, 
+                      allowed_base_dir: str = None) -> Tuple[bool, str]:
     """
-    Validate file path.
+    Validate file path with path traversal prevention.
     
     Args:
         file_path: File path to validate
         must_exist: Whether file must already exist
+        allowed_base_dir: Base directory to restrict path within (prevents traversal)
     
     Returns:
         Tuple of (is_valid, error_message)
@@ -119,13 +126,26 @@ def validate_file_path(file_path: str, must_exist: bool = False) -> Tuple[bool, 
         return False, "File path cannot be empty"
     
     try:
-        path = Path(file_path)
+        # For relative paths, resolve against allowed_base_dir if provided
+        if allowed_base_dir and not Path(file_path).is_absolute():
+            base = Path(allowed_base_dir).resolve()
+            path = (base / file_path).resolve()
+        else:
+            path = Path(file_path).resolve()  # Resolve to absolute path
+        
+        # Prevent path traversal attacks
+        if allowed_base_dir:
+            base = Path(allowed_base_dir).resolve()
+            try:
+                path.relative_to(base)  # Will raise ValueError if not within base
+            except ValueError:
+                return False, f"Path traversal detected: path must be within {base}"
         
         if must_exist and not path.exists():
             return False, f"File does not exist: {file_path}"
         
         # Check if parent directory exists (or can be created)
-        if not path.parent.exists():
+        if not must_exist and not path.parent.exists():
             return False, f"Parent directory does not exist: {path.parent}"
         
         return True, ""
@@ -133,13 +153,15 @@ def validate_file_path(file_path: str, must_exist: bool = False) -> Tuple[bool, 
         return False, f"Invalid file path: {str(e)}"
 
 
-def validate_directory_path(dir_path: str, create: bool = False) -> Tuple[bool, str]:
+def validate_directory_path(dir_path: str, create: bool = False,
+                           allowed_base_dir: str = None) -> Tuple[bool, str]:
     """
-    Validate directory path.
+    Validate directory path with path traversal prevention.
     
     Args:
         dir_path: Directory path to validate
         create: Whether to create directory if it doesn't exist
+        allowed_base_dir: Base directory to restrict path within (prevents traversal)
     
     Returns:
         Tuple of (is_valid, error_message)
@@ -148,7 +170,20 @@ def validate_directory_path(dir_path: str, create: bool = False) -> Tuple[bool, 
         return False, "Directory path cannot be empty"
     
     try:
-        path = Path(dir_path)
+        # For relative paths, resolve against allowed_base_dir if provided
+        if allowed_base_dir and not Path(dir_path).is_absolute():
+            base = Path(allowed_base_dir).resolve()
+            path = (base / dir_path).resolve()
+        else:
+            path = Path(dir_path).resolve()  # Resolve to absolute path
+        
+        # Prevent path traversal attacks
+        if allowed_base_dir:
+            base = Path(allowed_base_dir).resolve()
+            try:
+                path.relative_to(base)  # Will raise ValueError if not within base
+            except ValueError:
+                return False, f"Path traversal detected: path must be within {base}"
         
         if create:
             path.mkdir(parents=True, exist_ok=True)

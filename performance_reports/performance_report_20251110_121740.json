@@ -1,0 +1,126 @@
+{
+  "timestamp": "2025-11-10T12:17:19.990198",
+  "metrics": {
+    "startup_time": {
+      "average": 0.00577397346496582,
+      "min": 0.0020143985748291016,
+      "max": 0.020272493362426758,
+      "target": 3.0,
+      "passes": true,
+      "iterations": [
+        0.020272493362426758,
+        0.002178192138671875,
+        0.0020143985748291016,
+        0.002030611038208008,
+        0.0023741722106933594
+      ]
+    },
+    "memory_usage": {
+      "initial_mb": 26.1796875,
+      "average_mb": 26.187109375,
+      "min_mb": 26.18359375,
+      "max_mb": 26.1875,
+      "peak_traced_mb": 0.1385669708251953,
+      "target_idle_mb": 150.0,
+      "passes": true,
+      "samples": [
+        26.18359375,
+        26.1875,
+        26.1875,
+        26.1875,
+        26.1875,
+        26.1875,
+        26.1875,
+        26.1875,
+        26.1875,
+        26.1875
+      ]
+    },
+    "cpu_usage_idle": {
+      "average_percent": 0.0,
+      "min_percent": 0.0,
+      "max_percent": 0.0,
+      "target_idle_percent": 5.0,
+      "passes": true,
+      "samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "database_performance": {
+      "insert": {
+        "average_ms": 0.009601400035535335,
+        "min_ms": 0.008600000001024455,
+        "max_ms": 0.06659999962721486,
+        "operations": 1000
+      },
+      "select": {
+        "average_ms": 0.00713399995220243,
+        "min_ms": 0.006299998858594336,
+        "max_ms": 0.05869999949936755,
+        "operations": 100
+      },
+      "update": {
+        "average_ms": 0.006092999992688419,
+        "min_ms": 0.005300000339047983,
+        "max_ms": 0.030100000003585592,
+        "operations": 100
+      },
+      "bulk_select": {
+        "time_ms": 3.8376000011339784,
+        "records": 1000
+      }
+    },
+    "event_bus_performance": {
+      "average_us": 2.924330003770592,
+      "min_us": 2.399998265900649,
+      "max_us": 116.40000047918875,
+      "operations": 10000,
+      "subscribers_per_event": 5
+    },
+    "queue_performance": {
+      "add_task": {
+        "average_us": 2.561700046499027,
+        "min_us": 2.2999993234407157,
+        "max_us": 41.40000055485871,
+        "operations": 1000
+      },
+      "get_task": {
+        "average_us": 4.12500003221794,
+        "min_us": 3.0000010156072676,
+        "max_us": 23.50000067963265,
+        "operations": 100
+      },
+      "mark_completed": {
+        "average_us": 0.5709999823011458,
+        "min_us": 0.39999940781854093,
+        "max_us": 3.1999989005271345,
+        "operations": 100
+      }
+    }
+  },
+  "summary": {
+    "startup_time_passes": true,
+    "memory_usage_passes": true,
+    "cpu_usage_passes": true,
+    "all_targets_met": true
+  }
+}

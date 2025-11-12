@@ -187,8 +187,9 @@ class TaskScheduler:
             if self.is_within_active_hours():
                 return func(*args, **kwargs)
             else:
+                func_name = getattr(func, '__name__', 'unknown')
                 self.logger.debug(
-                    f"Skipping job '{func.__name__}' - outside active hours"
+                    f"Skipping job '{func_name}' - outside active hours"
                 )
         
         return wrapper
@@ -205,10 +206,21 @@ class TaskScheduler:
         """
         job = self.scheduler.get_job(job_id)
         if job:
+            # Get next run time from trigger
+            next_run = None
+            if hasattr(job, 'next_run_time'):
+                next_run = job.next_run_time
+            elif job.trigger:
+                # Try to get next fire time from trigger
+                try:
+                    next_run = job.trigger.get_next_fire_time(None, datetime.now())
+                except:
+                    next_run = None
+            
             return {
                 'id': job.id,
                 'name': job.name,
-                'next_run_time': job.next_run_time,
+                'next_run_time': next_run,
                 'trigger': str(job.trigger)
             }
         return None
