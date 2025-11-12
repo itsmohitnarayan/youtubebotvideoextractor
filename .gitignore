@@ -67,6 +67,11 @@ installer/
 htmlcov/
 .tox/
 .hypothesis/
+tests/fixtures/*.mp4
+tests/fixtures/*.avi
+tests/fixtures/*.mkv
+tests/fixtures/*.mov
+tests/fixtures/*.webm
 
 # OS
 Thumbs.db
